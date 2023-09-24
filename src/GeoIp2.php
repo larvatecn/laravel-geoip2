@@ -4,14 +4,20 @@
  */
 namespace Larva\GeoIp2;
 
+use GeoIp2\Database\Reader;
+use GeoIp2\Model\Asn;
+use GeoIp2\Model\City;
+use GeoIp2\Model\Country;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class Ip2Region
- * @method static array|mixed find(string $ip)
- * @method static array|mixed memorySearch(string $ip)
- * @method static array|mixed binarySearch(string $ip)
- * @method static array|mixed btreeSearch(string $ip)
+ * Class GeoIp2
+ * @method static array getLocation(string $ip)
+ * @method static array getReaders()
+ * @method static Reader createReader(string $db)
+ * @method static City city(string $ip)
+ * @method static Asn asn(string $ip)
+ * @method static Country country(string $ip)
  *
  * @author Tongle Xu <xutongle@gmail.com>
  */
