@@ -119,13 +119,14 @@ try {
 
 ```php
 use Larva\GeoIp2\GeoIp2;
+use Larva\GeoIp2\GeoIp2Manager;
 use Larva\GeoIp2\InvalidArgumentException;
 
-var_dump(GeoIp2::createReader(Location::DB_CITY)); // City库
+var_dump(GeoIp2::createReader(GeoIp2Manager::DB_CITY)); // City库
 // 返回连接City库的 GeoIp2\Database\Reader 对象
-var_dump(GeoIp2::createReader(Location::DB_ASN)); // ASN库
+var_dump(GeoIp2::createReader(GeoIp2Manager::DB_ASN)); // ASN库
 // 返回连接ASN库的 GeoIp2\Database\Reader 对象   
-var_dump(GeoIp2::createReader(Location::DB_ASN)); // Country库
+var_dump(GeoIp2::createReader(GeoIp2Manager::DB_ASN)); // Country库
 // 返回连接Country库的 GeoIp2\Database\Reader 对象
 ```
 
